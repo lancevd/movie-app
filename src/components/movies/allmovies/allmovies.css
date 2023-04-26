@@ -1,0 +1,83 @@
+@import url('../fiterbar/../../../index.css');
+
+#movies-grid {
+    color: var(--text);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 35px;
+    justify-content: space-between;
+}
+
+.movie {
+    /* width: 25%; */
+    height: fit-content;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #111;
+}
+
+.movie:hover {
+    box-shadow: 0px 0px 15px #111;
+}
+
+.movie-image {
+    height: 80%;
+}
+
+.movie-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.movie img:hover {
+    opacity: 0.6;
+}
+
+.movie-details {
+    padding: 10px 20px;
+}
+
+.movie-details h5:hover {
+    color: var(--red);
+}
+
+.rent-btn {
+    display: none;
+    width: 100%;
+    background: var(--red);
+    padding: 5px;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: larger;
+}
+
+.rent-btn:hover {
+    opacity: 0.7;
+    background: transparent;
+    border: 2px solid var(--red);
+}
+
+
+/* Pagination */
+
+.movies-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.page-box {
+    border: solid 2px var(--red);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.page-box:hover {
+    background: var(--red);
+}

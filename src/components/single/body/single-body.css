@@ -1,0 +1,15 @@
+@import url(../body/../../../index.css);
+
+#single-body {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+#single-left {
+    width: 20%;
+}
+
+#single-right {
+    width: 80%;
+}

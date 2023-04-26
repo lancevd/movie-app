@@ -1,0 +1,94 @@
+@import url('../../index.css');
+
+#featured h2 {
+    width: 60%;
+}
+
+#filter {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#filter p {
+    text-decoration: underline;
+    color: #eee;
+}
+
+#filter-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-btn {
+   border: solid #c5c4c4 1px; 
+   padding: 10px 20px;
+   color: #eee;
+   border-radius: 20px;
+   cursor: pointer;
+}
+
+.filter-btn:hover, #filter-buttons .current {
+    background: #DF3A3A;
+    border: #DF3A3A;
+}
+
+#movies-list {
+    color: var(--text);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    justify-content: space-between;
+}
+
+.movie-box {
+    /* width: 25%; */
+    /* height: 500px; */
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #111;
+}
+
+.movie-box img {
+    /* height: 80%; */
+    width: 100%;
+}
+
+.movie-box img:hover {
+    opacity: 0.6;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-info h5:hover {
+    color: var(--red);
+}
+
+#feat-but {
+    display: flex;
+    justify-content: center;
+}
+
+.mov-title {
+    padding: 5px 0;;
+}
+
+.movie-box a {
+    text-decoration: none;
+}
+
+#see {
+    width: 250px;
+    background: var(--red);
+    color: var(--white);
+    padding: 20px 5px;
+    border: solid #DF3A3A 4px;
+    font-size: large;
+    cursor: pointer;
+}
+
+#see:hover {
+    background: transparent;
+    color: var(--red);
+}

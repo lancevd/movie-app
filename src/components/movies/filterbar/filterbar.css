@@ -1,0 +1,19 @@
+@import url('../fiterbar/../../../index.css');
+
+#filter-bar {
+    color: var(--text);
+    border: solid var(--text) 1px;
+    height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#filter-bar select {
+    border: solid var(--text) 0.5px;
+    border-radius: 15px;
+    padding: 5px;
+    background: transparent;
+    color: var(--text);
+}

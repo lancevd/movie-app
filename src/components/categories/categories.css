@@ -1,0 +1,45 @@
+#cat-title {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+#cat-title h2 {
+    width: 50%;
+}
+
+#cat-title p {
+    width: 50%;
+}
+
+#cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.cat-gridbox {
+    background-color: #272B35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 5px;
+    border-radius: 30px;
+}
+
+.cat-gridbox-icon {
+    background: #22262F;
+    padding: 20px;
+    font-size: 2.5rem;
+    color: #DF3A3A;
+    border-radius: 30px;
+}
+
+.cat-gridbox-info {
+    line-height: 3rem;
+}
+
+.cat-gridbox-info a {
+    color: #DF3A3A;
+}

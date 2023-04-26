@@ -1,0 +1,39 @@
+@import url('../../index.css');
+
+footer {
+    padding: 30px 0;
+    background: var(--light);
+}
+
+#footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#footer-bottom {
+    text-align: center;
+}

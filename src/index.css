@@ -1,13 +1,70 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:ital,wght@0,200;0,300;0,400;0,500;0,700;1,400&display=swap');
+
+html {font-size: 100%;}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background: rgb(23,25,26);
+  background: linear-gradient(141deg, #22262f 35%, #262931 50%, #22262f 65%);
+}
+
+/* ==========GLOBAL========== */
+
+:root {
+  --red:#DF3A3A;
+  --dark: #22262F;
+  --text: #c5c4c4;
+  --white: #eee;
+  --light: #262931;
+
+ }
+
+.container {
+  width: 90%;
+  margin: auto !important;
+
+}
+
+p {
+  font-size: 1.2rem;
+  color: #c5c4c4;
+  font-weight: 400 !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  color: #fff;
+
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 5.653rem;
+}
+
+h2 {font-size: 3.998rem;}
+
+h3 {font-size: 2.827rem;}
+
+h4 {font-size: 1.999rem;}
+
+h5 {font-size: 1.414rem;}
+
+small, .text_small {font-size: 0.707rem;}
+
+.spacer {
+  height: 60px;
+}
+
+.space {
+  height: 30px;
 }

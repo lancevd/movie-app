@@ -1,0 +1,73 @@
+@import url(../header/../../../index.css);
+
+#single-header {
+    background: url('https://image.tmdb.org/t/p/original/rW0P4E9eLe7e4cgWbn9dXL4969Q.jpg') #22262fe7 no-repeat fixed;
+    background-blend-mode: multiply;
+    background-size: cover;
+    min-height: 40vh;
+    color: var(--white);
+}
+
+#sh-content{
+    display: flex;
+    gap: 20px;
+    
+}
+
+#v-poster{
+    width: 20%;
+    margin-top: 5rem;
+}
+
+#v-poster img {
+    width: 100%;
+    border: solid 1px var(--white);
+    border-radius: 5px;
+}
+
+#single-details-contain {
+    width: 80%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.genre-box {
+    display: flex;
+    gap: 10px;
+}
+
+.single-genre {
+    border: solid var(--white) 2px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.date-n-duration {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-lang {
+    margin: 20px 0;
+}
+
+#single-head-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+#rent-now {
+    padding: 10px;
+    background: var(--red);
+    color: var(--white);
+    font-size: large;
+    cursor: pointer;
+}
+
+#rent-now:hover{
+    font-size: larger;
+}
