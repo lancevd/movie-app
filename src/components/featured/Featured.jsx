@@ -24,26 +24,24 @@ useEffect(() => {
 
   return (
     <section id="featured" className="container">
-        <h2>The Most Popular Movies to Watch in 2023</h2>
+        <h2 className='text-2xl lg:text-6xl font-ubuntu font-bold text-white'>The Most Popular Movies to Watch in 2023</h2>
         <div className="space"></div>
         <div id="filter">
-            <div id="filter-buttons">
-                <div className="filter-btn current">All</div>
-                <div className="filter-btn">Rating</div>
-                <div className="filter-btn">Vote</div>
-                <div className="filter-btn">Latest</div>
-                <div className="filter-btn">Genre</div>
+            <div id="filter-buttons" className='gap-2 md:gap-4 flex-wrap'>
+                <div className="filter-btn px-3 py-2 md:px-4 md:py-3 current">All</div>
+                <div className="filter-btn px-3 py-2 md:px-4 md:py-3">Rating</div>
+                <div className="filter-btn px-3 py-2 md:px-4 md:py-3">Vote</div>
+                <div className="filter-btn px-3 py-2 md:px-4 md:py-3">Latest</div>
+                <div className="filter-btn px-3 py-2 md:px-4 md:py-3">Genre</div>
             </div>
-
-            <p>See more 10+</p>
         </div>
         <br />
         <h3>Popular</h3>
         <div className="space"></div>
 
-        <div id="movies-list">
+        <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {popular.map((item) => (
-            <MovieCard  title={item.title} poster={item.poster_path} date={item.release_date} />
+            <MovieCard  title={item.title} id={item.id} poster={item.poster_path} date={item.release_date} />
           ))}
         </div>
         <div className="spacer"></div>

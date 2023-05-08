@@ -1,10 +1,6 @@
 @import url('../../index.css');
 
-#testi-title {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
+
 
 #testi-title h2 {
     width: 50%;

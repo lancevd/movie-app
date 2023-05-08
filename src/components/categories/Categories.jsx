@@ -3,87 +3,76 @@ import React from 'react';
 import {GiPistolGun} from 'react-icons/gi'
 
 const Categories = () => {
+    const catItems = [
+        {
+            icon: <GiPistolGun />,
+            name: 'Action',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Fantasy',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Comedy',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Drama',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Mystery',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Horror',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Romance',
+            count: '1300',
+            link: '#'
+        },
+        {
+            icon: <GiPistolGun />,
+            name: 'Thriller',
+            count: '1300',
+            link: '#'
+        }
+    ]
   return (
     <section id='categories' className='container'>
-        <div id="cat-title">
-            <h2>Choose the Type of Film You Like</h2>
+        <div className='flex flex-col lg:flex-row gap-x-12 justify-between'>
+            <h2 className='text-2xl lg:text-6xl font-ubuntu font-bold text-white'>Choose the Type of Film You Like</h2>
             <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque incidunt magni aliquid atque culpa officia.</p>
         </div>
 
         <div className="space"></div>
 
-        <div id="cat-grid">
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+            {catItems.map((cat)=>(
+                <div className="cat-gridbox flex items-start flex-col xl:flex-row xl:items-center">
+                <div className="bg-[#22262F] text-[#DF3A3A] rounded-xl text-2xl p-5">{cat.icon}</div>
                 <div className="cat-gridbox-info">
-                    <h5>Action</h5>
-                    <p>1,300+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
+                    <h5>{cat.name} </h5>
+                    <p>{cat.count} Movies</p>
+                    <a href={cat.link} className="cat-gridbox-link">View More</a>
                 </div>
             </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Fantasy</h5>
-                    <p>800+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Comedy</h5>
-                    <p>1,000+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Drama</h5>
-                    <p>1,500+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Mystery</h5>
-                    <p>500+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Romance</h5>
-                    <p>900+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Horrow</h5>
-                    <p>700+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
-
-            <div className="cat-gridbox">
-                <div className="cat-gridbox-icon"><GiPistolGun /></div>
-                <div className="cat-gridbox-info">
-                    <h5>Thriller</h5>
-                    <p>500+ Movies</p>
-                    <a href="#" className="cat-gridbox-link">View More</a>
-                </div>
-            </div>
+            ))}
 
         </div>
     </section>

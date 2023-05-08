@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export function MovieCard(props) {
+export function AllMoviesCard(props) {
     return (
         <div className="movie-box">
           <Link to={`/single?id=${props.id}`}><img src={`https://image.tmdb.org/t/p/original/${props.poster}`} alt={props.title} /></Link>
@@ -14,4 +14,4 @@ export function MovieCard(props) {
     )
   }
 
-export default MovieCard
+export default AllMoviesCard

@@ -16,7 +16,7 @@
 
 #v-poster{
     width: 20%;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
 }
 
 #v-poster img {
@@ -26,8 +26,6 @@
 }
 
 #single-details-contain {
-    width: 80%;
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

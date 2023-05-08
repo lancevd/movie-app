@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:ital,wght@0,200;0,300;0,400;0,500;0,700;1,400&display=swap');
-
-html {font-size: 100%;}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -67,4 +68,10 @@ small, .text_small {font-size: 0.707rem;}
 
 .space {
   height: 30px;
+}
+
+@media screen and (max-width:767px) {
+  p{
+    font-size: 1rem;
+  }
 }
