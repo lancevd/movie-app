@@ -32,8 +32,8 @@ const SingleBody = () => {
     // loadVideos() 
 }, [])
   return (
-    <div id='single-body' className='contain flex-col-reverse md:flex-row'>
-        <div className='w-full md:w-1/5'>
+    <div id='single-body' className='contain flex-col-reverse lg:flex-row'>
+        <div className='w-full lg:w-1/5'>
             <h5>Produced by:</h5>
             <br/>
             {!movieDetails.production_companies ? "Loading" : movieDetails.production_companies.map((company) => (
@@ -43,7 +43,7 @@ const SingleBody = () => {
                 </div>
             ))}
         </div>
-        <div className='w-full md:w-4/5'>
+        <div className='w-full lg:w-4/5'>
             <div id="single-photos">
                 <h4>Trailer</h4>
                 <br />

@@ -10,7 +10,7 @@ const Hero = () => {
                 <p className='lg:text-xl font-semibold'>Welcome</p>
                 <div id='after'></div>
             </div>
-            <h2 className='text-2xl md:text-6xl'>Let's Make Your Own Cinema</h2>
+            <h2 className='text-2xl md:text-3xl lg:text-6xl'>Let's Make Your Own Cinema</h2>
             <p id="hl-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt non, reprehenderit voluptates blanditiis.</p>
             <div className='flex gap-4 '>
                 <button className='w-1/2 h-12 md:text-lg border-[#DF3A3A] font-medium border-4 hover:text-xl '>Show Plan</button>

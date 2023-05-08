@@ -65,17 +65,11 @@ const Header = () => {
 }
 
 export function NavBar () {
-  const [navMobile, setNavMobile] = useState('hidden')  
+  // const [navMobile, setNavMobile] = useState('hidden')  
   return (
-    <nav className="contain">
-        <div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
-          <div class="flex h-16 items-center justify-between">
-            <div class="md:flex md:items-center md:gap-12">
-            <div id="logo"><a href="/" className='text-lg font-ubuntu font-medium lg:font-bold md:text-xl lg:text-4xl'>MovRent</a></div>
-            </div>
-
-            <div class={`${navMobile} md:block`}>
-              <nav aria-label="Site Nav">
+    <nav className="contain flex-col md:flex-row">
+        
+            <div id="logo"><a href="/" className='text-xl font-ubuntu font-bold lg:font-bold md:text-2xl lg:text-4xl'>MovRent</a></div>
                 <ul class="flex items-center gap-6 text-sm">
                   <li>
                     <Link className='text-xl' to='/' > Home </Link>
@@ -90,18 +84,14 @@ export function NavBar () {
                     <Link className='text-xl' to='/about' > About </Link>
                   </li>
                 </ul>
-              </nav>
-            </div>
 
-            <div class="flex items-center gap-4">
-              <div class="sm:flex sm:gap-4">
+            <div class="flex flex-row items-center gap-4">
                 <h4 className='nav-icon'><MdNotifications /></h4>
                 <h4 className='nav-icon'><MdSearch /></h4>
                 <h4 className='nav-icon'><MdPerson /></h4>
-              </div>
             </div>
 
-            <div class="block md:hidden" onClick={e => setNavMobile('block')}>
+            {/* <div class="block md:hidden" onClick={e => setNavMobile('block')}>
                 <button
                   class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
                 >
@@ -120,9 +110,8 @@ export function NavBar () {
                     />
                   </svg>
                 </button>
-            </div>
-          </div>
-        </div>
+            </div> */}
+
     </nav> 
   )
 }
