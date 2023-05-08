@@ -23,7 +23,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <section id="featured" className="container">
+    <section id="featured" className="container w-11/12">
         <h2 className='text-2xl lg:text-6xl font-ubuntu font-bold text-white'>The Most Popular Movies to Watch in 2023</h2>
         <div className="space"></div>
         <div id="filter">
