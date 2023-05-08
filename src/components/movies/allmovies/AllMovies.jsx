@@ -22,7 +22,7 @@ const AllMovies = () => {
       },[])
 
   return (
-    <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">        
+    <div className="contain grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">        
         {moviesList.map((item) => (
             <AllMoviesCard  title={item.original_title} id={item.id} poster={item.poster_path} date={item.release_date} />
         ))}

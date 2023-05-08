@@ -24,7 +24,7 @@ const HeaderSingle = () => {
 }, [])
   return (
     <div id="single-header" style={{backgroundImage:`url('https://image.tmdb.org/t/p/original/${movieDetails.backdrop_path}')`,}}>
-        <div id="sh-content" className='container flex-col md:flex-row'>
+        <div id="sh-content" className='contain flex-col md:flex-row'>
             <div className='w-1/2 md:w-1/5 mt-4 md:mt-20 mx-auto'>
                 <img src={`https://image.tmdb.org/t/p/original/${movieDetails.poster_path}`} alt=""  />
             </div>

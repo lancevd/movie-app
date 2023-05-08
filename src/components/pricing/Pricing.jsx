@@ -1,7 +1,7 @@
 
 const Pricing = () => {
   return (
-    <div id="pricing" className="container">
+    <div id="pricing" className="contain">
         <div id="price-title">
             <h2>Choose a Pricing Plan that Suits for You</h2>
             <p>We present 3 packages tha you can choose to start watching the movies that you like at low prices according to your needs</p>

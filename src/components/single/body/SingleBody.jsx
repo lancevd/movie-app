@@ -32,7 +32,7 @@ const SingleBody = () => {
     // loadVideos() 
 }, [])
   return (
-    <div id='single-body' className='container flex-col-reverse md:flex-row'>
+    <div id='single-body' className='contain flex-col-reverse md:flex-row'>
         <div className='w-full md:w-1/5'>
             <h5>Produced by:</h5>
             <br/>

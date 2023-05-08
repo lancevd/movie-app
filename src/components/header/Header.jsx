@@ -55,7 +55,7 @@ const Header = () => {
         <div className="spacer"><br /></div>
         <Hero />
         {/* {!videoSlide ? <h5 color='#fff'>No Video Available</h5> : videoSlide.map((video)=>(
-          <div className=' container border w-full md:w-1/3 lg:w-1/4 h-36 md:h-48'>
+          <div className=' contain border w-full md:w-1/3 lg:w-1/4 h-36 md:h-48'>
             { <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${video.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>}
           </div>  
         ))} */}
@@ -67,7 +67,7 @@ const Header = () => {
 export function NavBar () {
   const [navMobile, setNavMobile] = useState('hidden')  
   return (
-    <nav className="container">
+    <nav className="contain">
         <div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-between">
             <div class="md:flex md:items-center md:gap-12">

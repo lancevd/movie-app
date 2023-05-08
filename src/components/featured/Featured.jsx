@@ -23,7 +23,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <section id="featured" className="container w-11/12">
+    <section id="featured" className="contain w-11/12">
         <h2 className='text-2xl lg:text-6xl font-ubuntu font-bold text-white'>The Most Popular Movies to Watch in 2023</h2>
         <div className="space"></div>
         <div id="filter">
@@ -39,7 +39,7 @@ useEffect(() => {
         <h3>Popular</h3>
         <div className="space"></div>
 
-        <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="contain grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {popular.map((item) => (
             <MovieCard  title={item.title} id={item.id} poster={item.poster_path} date={item.release_date} />
           ))}

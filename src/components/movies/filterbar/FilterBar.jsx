@@ -2,7 +2,7 @@ import React from 'react'
 
 const FilterBar = () => {
   return (
-    <div id='filter-bar' className='container'>
+    <div id='filter-bar' className='contain'>
         <div id="show-number">
             <label htmlFor="">Show: </label>
             <select name="" id="">

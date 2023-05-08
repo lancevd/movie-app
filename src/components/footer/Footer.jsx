@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer>
-        <div className='container grid grid-cols-2 lg:grid-cols-4 gap-4'>
+        <div className='contain grid grid-cols-2 lg:grid-cols-4 gap-4'>
             <div className="footer-menu">
                 <h4>Services</h4>
                 <div className="footer-menu-links">
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
 
-        <div id="footer-bottom" className='container'>
+        <div id="footer-bottom" className='contain'>
             <hr />
             <div className="space"></div>
             <p>&copy; MovRent 2022 | All Rights Reserved</p>

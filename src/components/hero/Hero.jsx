@@ -4,7 +4,7 @@ import SliderCarousel from '../Slider';
 
 const Hero = () => {
   return (
-    <div className='container flex gap-6'>
+    <div className='contain flex gap-6'>
         <div className='w-full md:w-1/2 p-4 md:pr-10 leading-8 lg:p-8 flex flex-col gap-4'>
             <div id="hl-greeting">
                 <p className='lg:text-xl font-semibold'>Welcome</p>

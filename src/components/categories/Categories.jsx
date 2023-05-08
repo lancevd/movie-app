@@ -54,7 +54,7 @@ const Categories = () => {
         }
     ]
   return (
-    <section id='categories' className='container'>
+    <section id='categories' className='contain'>
         <div className='flex flex-col lg:flex-row gap-x-12 justify-between'>
             <h2 className='text-2xl lg:text-6xl font-ubuntu font-bold text-white'>Choose the Type of Film You Like</h2>
             <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque incidunt magni aliquid atque culpa officia.</p>
