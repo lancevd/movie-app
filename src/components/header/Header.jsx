@@ -81,7 +81,7 @@ export function NavBar () {
                     <Link className='text-xl' to='/' > Home </Link>
                   </li>
                   <li>
-                    <Link className='text-xl' to='movies' > Movies </Link>
+                    <Link className='text-xl' to='/movies' > Movies </Link>
                   </li>
                   <li>
                     <Link className='text-xl' to='/pricing' > Pricing </Link>
