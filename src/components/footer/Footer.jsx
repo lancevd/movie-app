@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
         <div className='contain grid grid-cols-2 lg:grid-cols-4 gap-4'>
             <div className="footer-menu">
-                <h4>Services</h4>
+                <h4 className='text-xl lg:text-3xl'>Services</h4>
                 <div className="footer-menu-links">
                     <a href="">Movies</a>
                     <a href="">Rentals</a>
@@ -15,7 +15,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-menu">
-                <h4>Information</h4>
+                <h4 className='text-xl lg:text-3xl'>Information</h4>
                 <div className="footer-menu-links">
                     <a href="">Contact</a>
                     <a href="">About</a>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-menu">
-                <h4>Quicklinks</h4>
+                <h4 className='text-xl lg:text-3xl'>Quicklinks</h4>
                 <div className="footer-menu-links">
                     <a href="">Terms of Use</a>
                     <a href="">Privacy Policy</a>
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-menu">
-                <h4>Get in Touch</h4>
+                <h4 className='text-xl lg:text-3xl'>Get in Touch</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae asperiores quos tempora accusantium. Ut deleniti odio quaerat harum exercitationem.</p>
                 <div id="footer-socials">
 

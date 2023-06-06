@@ -67,28 +67,31 @@ const Header = () => {
 export function NavBar () {
   // const [navMobile, setNavMobile] = useState('hidden')  
   return (
-    <nav className="contain flex-col md:flex-row">
+    <nav className="contain flex-col md:flex-row gap-3">
         
-            <div id="logo"><a href="/" className='text-xl font-ubuntu font-bold lg:font-bold md:text-2xl lg:text-4xl'>MovRent</a></div>
-                <ul class="flex items-center gap-6 text-sm">
-                  <li>
-                    <Link className='text-xl' to='/' > Home </Link>
-                  </li>
-                  <li>
-                    <Link className='text-xl' to='/movies' > Movies </Link>
-                  </li>
-                  <li>
-                    <Link className='text-xl' to='/pricing' > Pricing </Link>
-                  </li>
-                  <li>
-                    <Link className='text-xl' to='/about' > About </Link>
-                  </li>
-                </ul>
+            <div id="logo">
+              <a href="/" className='text-xl font-ubuntu font-bold lg:font-bold md:text-2xl lg:text-4xl'>MovRent</a>
+            </div>
 
-            <div class="flex flex-row items-center gap-4">
-                <h4 className='nav-icon'><MdNotifications /></h4>
-                <h4 className='nav-icon'><MdSearch /></h4>
-                <h4 className='nav-icon'><MdPerson /></h4>
+            <ul class="flex items-center gap-6 text-sm">
+                  <li>
+                    <Link className='text-base lg:text-xl' to='/' > Home </Link>
+                  </li>
+                  <li>
+                    <Link className='text-base lg:text-xl' to='/movies' > Movies </Link>
+                  </li>
+                  <li>
+                    <Link className='text-base lg:text-xl' to='/pricing' > Pricing </Link>
+                  </li>
+                  <li>
+                    <Link className='text-base lg:text-xl' to='/about' > About </Link>
+                  </li>
+            </ul>
+
+            <div class="flex flex-row items-center gap-4 text-sm lg:text-lg">
+                <h4 className='nav-icon text-lg lg:text-2xl'><MdNotifications /></h4>
+                <h4 className='nav-icon text-lg lg:text-2xl'><MdSearch /></h4>
+                <h4 className='nav-icon text-lg lg:text-2xl'><MdPerson /></h4>
             </div>
 
             {/* <div class="block md:hidden" onClick={e => setNavMobile('block')}>
