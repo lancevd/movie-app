@@ -29,14 +29,14 @@ const AllMovies = () => {
         <div className="spacer"></div>
 
         <div className="movies-pagination">
-
+{/* 
             <div className="page-box">1</div>
             <div className="page-box">2</div>
             <div className="page-box">3</div>
             <div className="page-box">4</div>
             <div className="page-box">5</div>
-            <div className="page-box">6</div>
-            <div onClick={e => setPageNo(pageNo+1)} className="page-box">Next</div>
+            <div className="page-box">6</div> */}
+            {/* <div onClick={e => setPageNo(pageNo+1)} className="page-box">Next</div> */}
         </div>
 
     </div>

@@ -81,10 +81,10 @@ export function NavBar () {
                     <Link className='text-base lg:text-xl' to='/movies' > Movies </Link>
                   </li>
                   <li>
-                    <Link className='text-base lg:text-xl' to='/pricing' > Pricing </Link>
+                    <Link className='text-base lg:text-xl' to='/#' > Pricing </Link>
                   </li>
                   <li>
-                    <Link className='text-base lg:text-xl' to='/about' > About </Link>
+                    <Link className='text-base lg:text-xl' to='/#' > About </Link>
                   </li>
             </ul>
 
