@@ -1,6 +1,6 @@
 import React from 'react';
 import {MdPlayCircleFilled} from 'react-icons/md'
-import SliderCarousel from '../Slider';
+// SliderCarousel intentionally not used — remove import to fix lint
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
                 <div id='after'></div>
             </div>
             <h2 className='text-2xl md:text-3xl lg:text-6xl'>Let's Make Your Own Cinema</h2>
-            <p id="hl-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt non, reprehenderit voluptates blanditiis.</p>
+            <p id="hl-sub">Stream thousands of movies and TV shows — curated recommendations, trailers, and easy watch links.</p>
             <div className='flex gap-4 '>
                 <button className='w-1/2 h-12 md:text-lg border-[#DF3A3A] font-medium border-4 hover:text-xl '>Show Plan</button>
                 <button className='w-1/2 h-12 md:text-lg border-[#DF3A3A] font-medium border-4 hover:text-xl bg-[#DF3A3A]'>Get Started</button>

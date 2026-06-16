@@ -3,17 +3,9 @@ import React, {useState, useEffect} from 'react'
 const SingleBody = () => {
     const [movieDetails, setMovieDetails] = useState([])
     const [videos, setVideos] = useState([])
+    const [similar, setSimilar] = useState([])
   const getParams = window.location.search 
   
-  function loadMovie() { 
-    fetch(`https://api.themoviedb.org/3/movie/${videoID}?api_key=918790a038aea2ed15515872e62a5cb4&`)
-      .then(response => response.json())
-      .then(result => {
-          setMovieDetails(result)
-          console.log(movieDetails)
-      })
-      .catch(error => console.log('error', error));
-  }
 
 
   let params = new URLSearchParams(getParams);
@@ -21,16 +13,29 @@ const SingleBody = () => {
   // console.log(videoID)
   
   useEffect(() =>{
-      loadMovie()
-      fetch(`https://api.themoviedb.org/3/movie/${videoID}/videos?api_key=918790a038aea2ed15515872e62a5cb4&`)
+      const key = process.env.REACT_APP_TMDB_API_KEY
+      // load movie details
+      fetch(`https://api.themoviedb.org/3/movie/${videoID}?api_key=${key}&`)
           .then(response => response.json())
           .then(result => {
-              setVideos(result.results[0])
-            //   console.log(videos)
+              setMovieDetails(result || {})
           })
           .catch(error => console.log('error', error));
-    // loadVideos() 
-}, [])
+
+      // load videos
+      fetch(`https://api.themoviedb.org/3/movie/${videoID}/videos?api_key=${key}&`)
+        .then(response => response.json())
+        .then(result => {
+            setVideos(Array.isArray(result?.results) ? result.results[0] : {})
+        })
+        .catch(error => console.log('error', error));
+
+      // fetch similar movies
+      fetch(`https://api.themoviedb.org/3/movie/${videoID}/similar?api_key=${key}&page=1`)
+        .then(res=>res.json())
+        .then(r=>setSimilar(Array.isArray(r?.results) ? r.results : []))
+        .catch(err=>console.log(err))
+}, [videoID])
   return (
     <div id='single-body' className='contain flex-col-reverse lg:flex-row'>
         <div className='w-full lg:w-1/5'>
@@ -57,6 +62,20 @@ const SingleBody = () => {
                 <h4>Overview</h4>
                 <br />
                 <p>{movieDetails.overview} </p> 
+            </div>
+            <div className="spacer"></div>
+            <div id="similar-movies">
+              <h4>Similar Movies</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                {similar && similar.map(item => (
+                  <div key={item.id} className="card">
+                    <a href={`/single?id=${item.id}`}>
+                      <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt={item.title} />
+                      <h5 className='mt-2'>{item.title}</h5>
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
         </div>
     </div>

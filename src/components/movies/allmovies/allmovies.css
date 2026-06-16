@@ -62,6 +62,7 @@
 /* Pagination */
 
 .movies-pagination {
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -69,8 +70,9 @@
 
 .page-box {
     border: solid 2px var(--red);
-    width: 40px;
+    width: fit-content;
     height: 40px;
+    padding: 0px 20px;
     display: flex;
     justify-content: center;
     align-items: center;

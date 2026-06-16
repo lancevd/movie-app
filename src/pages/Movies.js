@@ -14,6 +14,7 @@ const Movies = () => {
         <NavBar />
         <div className='spacer' ></div>
         <FilterBar />
+        <h2 className='text-center'>All Movies</h2>
         <div className='spacer' ></div>
         <AllMovies />
         <div className='spacer' ></div>

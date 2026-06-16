@@ -1,25 +1,20 @@
 import React, { useEffect, useState } from 'react'
 // import poster from '../../images/Withcher-poster.jpg'
 import MovieCard from '../MovieCard'
-import axios from 'axios';
 
 const Featured = () => {
   const [popular, setPopular] = useState([])
-  const API_KEY = '918790a038aea2ed15515872e62a5cb4'
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
 useEffect(() => {  
-  fetch("https://api.themoviedb.org/3/movie/popular?api_key=918790a038aea2ed15515872e62a5cb4&language=en-US&page=1", requestOptions)
-  .then(response => response.json())
-  .then(result => {
-    const featuredMovies = Array.from(result.results).splice(0,8)
-    setPopular(featuredMovies)
-    console.log(popular)  
-  })
-  .catch(error => console.log('error', error));
-  
+    const requestOptions = { method: 'GET', redirect: 'follow' }
+    const key = "918790a038aea2ed15515872e62a5cb4";
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`, requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      const featuredMovies = Array.isArray(result?.results) ? result.results.slice(0,8) : []
+      setPopular(featuredMovies)
+    })
+    .catch(error => console.log('error', error));
+
 }, [])
 
   return (

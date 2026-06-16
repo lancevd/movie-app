@@ -7,36 +7,36 @@ const Footer = () => {
             <div className="footer-menu">
                 <h4 className='text-xl lg:text-3xl'>Services</h4>
                 <div className="footer-menu-links">
-                    <a href="">Movies</a>
-                    <a href="">Rentals</a>
-                    <a href="">Buy</a>
-                    <a href="">Collections</a>
+                    <a href="/movies">Movies</a>
+                    <a href="/movies">Rentals</a>
+                    <a href="/movies">Buy</a>
+                    <a href="/collections">Collections</a>
                 </div>
             </div>
 
             <div className="footer-menu">
                 <h4 className='text-xl lg:text-3xl'>Information</h4>
                 <div className="footer-menu-links">
-                    <a href="">Contact</a>
-                    <a href="">About</a>
-                    <a href="">Register</a>
-                    <a href="">Download App</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/about">About</a>
+                    <a href="/register">Register</a>
+                    <a href="/download">Download App</a>
                 </div>
             </div>
 
             <div className="footer-menu">
                 <h4 className='text-xl lg:text-3xl'>Quicklinks</h4>
                 <div className="footer-menu-links">
-                    <a href="">Terms of Use</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Patnership</a>
-                    <a href="">Enquiries</a>
+                    <a href="/terms">Terms of Use</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/partnership">Partnership</a>
+                    <a href="/contact">Enquiries</a>
                 </div>
             </div>
 
             <div className="footer-menu">
                 <h4 className='text-xl lg:text-3xl'>Get in Touch</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure recusandae asperiores quos tempora accusantium. Ut deleniti odio quaerat harum exercitationem.</p>
+                    <p>Questions or feedback? Reach out and we'll help you find great movies and shows. Follow us on social channels for recommendations and updates.</p>
                 <div id="footer-socials">
 
                 </div>
