@@ -1,39 +1,49 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 // import {FaBell} from 'react-icons/fa'
-import {MdSearch} from 'react-icons/md'
-import {MdPerson} from 'react-icons/md'
-import {MdNotifications} from 'react-icons/md'
-import Hero from '../hero/Hero'
-import {Link, useNavigate} from 'react-router-dom';
-
-
+import { MdSearch } from "react-icons/md";
+import { MdPerson } from "react-icons/md";
+import { MdNotifications } from "react-icons/md";
+import Hero from "../hero/Hero";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [nowPlaying, setNowPlaying] = useState({})
+  const [nowPlaying, setNowPlaying] = useState({});
 
-  useEffect(()=>{
+  useEffect(() => {
     const key = "918790a038aea2ed15515872e62a5cb4";
     const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
+      method: "GET",
+      redirect: "follow",
     };
 
-    fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US`, requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        if (result && Array.isArray(result.results) && result.results.length>0) {
-          setNowPlaying(result.results[0])
+    fetch(
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US`,
+      requestOptions,
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        if (
+          result &&
+          Array.isArray(result.results) &&
+          result.results.length > 0
+        ) {
+          setNowPlaying(result.results[0]);
         }
       })
-      .catch(error => console.log('error', error));
-  }, [])
-  
+      .catch((error) => console.log("error", error));
+  }, []);
 
-  return (  
-    <header style={{backgroundImage:`url('https://image.tmdb.org/t/p/original/${nowPlaying.backdrop_path}')`,}}>
+  return (
+    <header
+      style={{
+        backgroundImage: `url('https://image.tmdb.org/t/p/original/${nowPlaying.backdrop_path}')`,
+      }}
+    >
       <div id="header-overlay">
-        <NavBar />  
-        <div className="spacer"><br /></div>
+        <NavBar />
+        <div className="spacer">
+          <br />
+        </div>
         <Hero />
         {/* {!videoSlide ? <h5 color='#fff'>No Video Available</h5> : videoSlide.map((video)=>(
           <div className=' contain border w-full md:w-1/3 lg:w-1/4 h-36 md:h-48'>
@@ -42,60 +52,84 @@ const Header = () => {
         ))} */}
       </div>
     </header>
-  )
-}
+  );
+};
 
-export function NavBar () {
+export function NavBar() {
   const navigate = useNavigate();
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState("");
 
   function onSearch(e) {
-    e.preventDefault()
-    const q = query.trim()
-    if (!q) return
-    navigate(`/search?q=${encodeURIComponent(q)}`)
-    setQuery('')
+    e.preventDefault();
+    const q = query.trim();
+    if (!q) return;
+    navigate(`/search?q=${encodeURIComponent(q)}`);
+    setQuery("");
   }
 
   return (
     <nav className="contain flex-col md:flex-row gap-3">
-        
-            <div id="logo">
-              <Link to='/' className='text-xl font-ubuntu font-bold lg:font-bold md:text-2xl lg:text-4xl'>MovRent</Link>
-            </div>
+      <div id="logo">
+        <Link
+          to="/"
+          className="text-xl font-ubuntu font-bold lg:font-bold md:text-2xl lg:text-4xl"
+        >
+          MovRent
+        </Link>
+      </div>
 
-            <ul className="flex items-center gap-6 text-sm">
-                  <li>
-                    <Link className='text-base lg:text-xl' to='/' > Home </Link>
-                  </li>
-                  <li>
-                    <Link className='text-base lg:text-xl' to='/movies' > Movies </Link>
-                  </li>
-                  <li>
-                    <Link className='text-base lg:text-xl' to='/tv' > TV Series </Link>
-                  </li>
-                  <li>
-                    <Link className='text-base lg:text-xl' to='/#' > About </Link>
-                  </li>
-            </ul>
+      <ul className="flex items-center gap-6 text-sm">
+        <li>
+          <Link className="text-base lg:text-xl" to="/">
+            {" "}
+            Home{" "}
+          </Link>
+        </li>
+        <li>
+          <Link className="text-base lg:text-xl" to="/movies">
+            {" "}
+            Movies{" "}
+          </Link>
+        </li>
+        <li>
+          <Link className="text-base lg:text-xl" to="/tv">
+            {" "}
+            TV Series{" "}
+          </Link>
+        </li>
+        <li>
+          <Link className="text-base lg:text-xl" to="/#">
+            {" "}
+            About{" "}
+          </Link>
+        </li>
+      </ul>
 
-            <form onSubmit={onSearch} className="flex items-center gap-4">
-              <input
-                aria-label="Search movies"
-                placeholder="Search movies, TV..."
-                className="bg-[#262931] text-sm px-3 py-1 rounded"
-                value={query}
-                onChange={e=>setQuery(e.target.value)}
-              />
-              <button type="submit" className="nav-icon text-lg lg:text-2xl"><MdSearch /></button>
-              <h4 className='nav-icon text-lg lg:text-2xl'><MdNotifications /></h4>
-              <h4 className='nav-icon text-lg lg:text-2xl'><MdPerson /></h4>
-            </form>
-            <div className="ml-4">
-              <Link to="/register" className="text-sm lg:text-base">Register</Link>
-            </div>
+      <form onSubmit={onSearch} className="flex items-center gap-4">
+        <input
+          aria-label="Search movies"
+          placeholder="Search movies, TV..."
+          className="bg-[#262931] text-sm px-3 py-1 rounded"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button type="submit" className="nav-icon text-lg lg:text-2xl">
+          <MdSearch />
+        </button>
+        <h4 className="nav-icon text-lg lg:text-2xl">
+          <MdNotifications />
+        </h4>
+        <h4 className="nav-icon text-lg lg:text-2xl">
+          <MdPerson />
+        </h4>
+      </form>
+      <div className="ml-4">
+        <Link to="/register" className="text-sm lg:text-base">
+          Register
+        </Link>
+      </div>
 
-            {/* <div class="block md:hidden" onClick={e => setNavMobile('block')}>
+      {/* <div class="block md:hidden" onClick={e => setNavMobile('block')}>
                 <button
                   class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
                 >
@@ -115,9 +149,8 @@ export function NavBar () {
                   </svg>
                 </button>
             </div> */}
-
-    </nav> 
-  )
+    </nav>
+  );
 }
 
-export default Header
+export default Header;

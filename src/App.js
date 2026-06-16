@@ -1,19 +1,19 @@
 // import logo from './logo.svg';
 
-import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import TVSeries from "./pages/TVSeries";
 import Register from "./pages/Register";
 import SearchResults from "./pages/SearchResults";
-import './components/header/header.css';
-import './components/footer/footer.css';
-import SingleMovie from './pages/SingleMovie';
+import "./components/header/header.css";
+import "./components/footer/footer.css";
+import SingleMovie from "./pages/SingleMovie";
 
 function App() {
   return (
     <Router>
-      <div className="App"> 
+      <div className="App">
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/movies" element={<Movies />} />

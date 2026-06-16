@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { MdVideoLibrary } from "react-icons/md";
 
 const Categories = () => {
-    const [catItems, setCatItems] = useState([]);
-    useEffect(()=>{
-      const key = "918790a038aea2ed15515872e62a5cb4"
-      fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${key}`)
-      .then(res=>res.json())
-      .then(data=>setCatItems(Array.isArray(data?.genres) ? data.genres : []))
-    }, [])
+  const [catItems, setCatItems] = useState([]);
+  useEffect(() => {
+    const key = "918790a038aea2ed15515872e62a5cb4";
+    fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${key}`)
+      .then((res) => res.json())
+      .then((data) =>
+        setCatItems(Array.isArray(data?.genres) ? data.genres : []),
+      );
+  }, []);
   return (
     <section id="categories" className="contain">
       <div className="flex flex-col lg:flex-row gap-x-12 justify-between">
@@ -16,7 +18,8 @@ const Categories = () => {
           Browse movie genres
         </h2>
         <p className="subtitle">
-          Browse popular movie categories powered by The Movie Database (TMDB). Click a category to view related titles.
+          Browse popular movie categories powered by The Movie Database (TMDB).
+          Click a category to view related titles.
         </p>
       </div>
 
@@ -24,7 +27,10 @@ const Categories = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {catItems.map((cat) => (
-          <div key={cat.id} className="cat-gridbox flex items-start flex-col xl:flex-row xl:items-center">
+          <div
+            key={cat.id}
+            className="cat-gridbox flex items-start flex-col xl:flex-row xl:items-center"
+          >
             <div className="bg-[#22262F] text-[#DF3A3A] rounded-xl text-2xl">
               <MdVideoLibrary />
             </div>
@@ -40,6 +46,6 @@ const Categories = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Categories
+export default Categories;
