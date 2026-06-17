@@ -4,7 +4,8 @@ import AllMoviesCard from "../../AllMoviesCard";
 
 const AllMovies = () => {
   const [moviesList, setMoviesList] = useState([]);
-  const apiKey = process.env.REACT_APP_TMDB_API_KEY || "";
+  const apiKey =
+    process.env.REACT_APP_TMDB_API_KEY || "918790a038aea2ed15515872e62a5cb4";
   const [pageNo, setPageNo] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const location = useLocation();
